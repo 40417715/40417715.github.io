@@ -1,0 +1,226 @@
+body {
+    font: 24px "Corbel", sans-serif;
+    text-align: center;
+    color: black;
+}
+
+#section{
+    margin-top: 100px;
+    width:100%;
+}
+
+#home_section{
+    margin-top: 200px;
+    width:100%;
+}
+#header1{
+    font: 200px "Corbel", sans-serif;
+    position:relative; 
+    width:100%;
+}
+#header2{
+    font: 32px "Corbel", sans-serif;
+    position:relative; 
+    letter-spacing: 3px;
+    width:100%;
+}
+#header3{
+    font: 200px "Corbel", sans-serif;
+    position:relative; 
+    width:100%;
+}
+#header4{
+    font: 32px "Corbel", sans-serif;
+    position:relative; 
+    letter-spacing: 3px;
+    width:100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout:fixed;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 2s
+}
+th, td {
+   padding: 8px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+   overflow:hidden;
+   width: auto;
+}
+tr:hover {
+   background-color:#f5f5f5;
+}
+
+button{
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 20px "Corbel", sans-serif;
+    margin: 10px 5px;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    cursor: pointer;
+}
+#help_button{
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    border-radius: 20px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font: 20px "Corbel", sans-serif;
+    margin: 10px 5px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+}
+button:hover {
+    background-color: #f5f5f5;
+}
+#help_button{
+    background-color: #f5f5f5;
+}
+
+textarea {
+    max-width: 450px;
+    max-height: 100px;
+    background-color: white;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    margin: 10px 10px 20px 10px;
+    border: none;
+    background: #f1f1f1;
+    background-color: #ddd;
+    outline: none;
+    font: 18px "Corbel", sans-serif;
+    color: black;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    font: 18px "Corbel", sans-serif;
+    color: black;
+}
+input[type=text], input[type=password]  {
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0 30px 0;
+    border: none;
+    background: #f1f1f1;
+    font: 18px "Corbel", sans-serif;
+    color: black;
+}
+
+.form_container {
+    max-width: 450px;
+    padding: 15px;
+    background-color: white;
+    position: relative;
+    margin:0 auto;
+    text-align:center;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 0.5s
+}
+.form_popup {
+    display: none;
+    text-align: center;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 0.5s
+}
+.form_popup_container {
+    max-width: 450px;
+    background-color: white;
+    position: relative;
+    margin:0 auto;
+    text-align:center;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F1F1F1;
+    background-color: rgba(0,0,0,0.4);
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+.modal_container {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+.modal_content {
+    position: relative;
+    padding: 15px;
+    margin:0 auto;
+    background-color: #ffffff;
+    top: 25%;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+}
+.modal:target {
+    pointer-events: auto;
+}
+.modal input[type=text]  {
+    max-width: 450px;
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0 30px 0;
+    border: none;
+    background: #f1f1f1;
+    font: 20px "Corbel", sans-serif;
+    color: black;
+}
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+ }
+ @keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+ }
+ @-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+ }
+ @keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+ }

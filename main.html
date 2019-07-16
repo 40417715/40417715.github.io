@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Note Taking</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script src="notes.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="Jotes.png" />
+</head>
+<body>
+
+    <div id="login_modal" class="modal" style="display:block" role="region">
+        <div class="modal_container" role="region">
+            <div class="modal_content" role="form">
+                <form class="form_container" id="login_form" autocomplete="off">
+                    <label for="login_username">Username: </label><br>
+                    <input type="text" name="username" id="login_username" autofocus><br><br>
+                    <label for="login_password">Password: </label><br>
+                    <input type="password" name="password" id="login_password" required><br>
+                    <button type="button" class="login_button" onclick="Javascript:login();">Login</button>
+                </form>
+                <button class="signup_page" onclick="Javascript:openSignupForm();closeLoginForm();">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="signup_modal" class="modal" role="region">
+        <div class="modal_container" role="region">
+            <div class="modal_content" role="form">
+                <form class="form_container" id="signup_form" autocomplete="off">
+                    <label for="signup_username">Username: </label><br>
+                    <input type="text" name="username" id="signup_username" ><br><br>
+                    <label for="signup_password">Password: </label><br>
+                    <input type="password"  name="password" id="signup_password" required><br><br>
+                    <label for="signup_password2">Retype Password: </label><br>
+                    <input type="password" name="password2" id="signup_password2" required><br>
+                    <button type="button" class="signup_page" onclick="javascript:signUp();">Sign Up</button>
+                </form>
+                <button class="signup_page" onclick="Javascript:openLoginForm();closeSignupForm();">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main_page" style="display:none" role="main">
+        
+        <div id="section" role="region">
+            <div id="header3" role="heading">Jotes</div>
+            <div id="header4" role="heading">Joe Notes Best</div>
+        </div>
+        <div id="note_modal" class="modal" role="region">
+            <div class="modal_container" role="region">
+                <div class="modal_content" role="form">
+                    <label for="view_note_subject">Subject: </label><br>
+                    <input type="text" name="subject" id="view_note_subject" readonly><br><br>
+                    <label for="view_note">Note: </label><br>
+                    <textarea rows = "5" cols = "54" name="note" id="view_note" readonly></textarea><br><br>
+                    <button type="button" class="button1" onclick="Javascript:closeViewRow();">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <div role="region">
+            <button id="new_note_button" class="new_note" onclick="Javascript:openForm();">+</button>
+            <button id="save_note" class="save_button" onclick="Javascript:saveNotes();">Save</button>
+            <div class="form_popup" id="note_form" role="form">
+                <form class="form_popup_container" autocomplete="off">
+                    <label for="new_subject">Subject: </label><br>
+                    <input type="text" name="subject" id="new_subject"><br><br>
+                    <label for="new_note">Note: </label><br>
+                    <textarea rows = "5" cols = "54" name="note" id="new_note" required></textarea><br><br>
+                    <button type="reset" class="add_note" onclick="Javascript:addRow();">Add</button>
+                    <button type="button" class="button1" onclick="Javascript:closeForm();">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <div role="table">
+            <table id="note_table">
+                <tr>
+                    <th>Subject</th>
+                    <th>Note</th>
+                    <th>Date & Time</th>
+                    <th>Edit</th>
+                </tr>
+            </table>
+            <br>
+        </div>
+
+        <div>
+            <button type="button" class="button1" id="help_button" onclick="location.href = 'help.html';">Help</button>
+        </div>
+    </div>
+</body>
+</html>
